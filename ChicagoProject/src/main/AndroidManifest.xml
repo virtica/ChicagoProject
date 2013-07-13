@@ -35,6 +35,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+            <activity
+                    android:name=".NeighborhoodActivity"
+
+                    android:configChanges="orientation|keyboardHidden">
+            </activity>
+            <activity
+                    android:name=".EventsActivity"
+                    android:configChanges="orientation|keyboardHidden">
+            </activity>
+            <activity
+                    android:name=".CommunityConcernActivity"
+                    android:configChanges="orientation|keyboardHidden">
+            </activity>
     </application>
 
 </manifest>

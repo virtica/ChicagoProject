@@ -1,6 +1,7 @@
 package com.virtica.chicagoproject;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.location.Location;
@@ -128,8 +129,23 @@ public class HomeActivity extends BaseActivity {
     }
 
     public void selectItem(int position){
+        switch(position) {
+            case 1:
+                Intent a = new Intent(HomeActivity.this, NeighborhoodActivity.class);
+                startActivity(a);
+                break;
+            case 2:
+                Intent b = new Intent(HomeActivity.this, EventsActivity.class);
+                startActivity(b);
+                break;
+            case 3:
+                Intent c = new Intent(HomeActivity.this, CommunityConcernActivity.class);
+                startActivity(c);
+                break;
+            default:
+        }
         mDrawerList.setItemChecked(position, true);
-        setTitle(mSectionTitles[position]);
+
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
